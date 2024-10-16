@@ -8,10 +8,31 @@ body {
 }
 .header {
   text-align: center;
+  margin: 10px;
+  border: 2px solid red;
 }
 .container {
   display: flex;
   gap: 10px;
   align-items: center;
   justify-content: center;
+  margin: 10px;
+}
+.categories {
+  width: 20vw;
+  padding: 10px;
+  border: 2px solid blue;
+  height: 100vh;
+}
+.categories ul {
+  list-style: none;
+}
+.categories ul li a {
+  text-decoration: none;
+}
+.books {
+  width: 80vw;
+  padding: 10px;
+  border: 2px solid violet;
+  height: 100vh;
 }
