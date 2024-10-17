@@ -8,78 +8,31 @@
   </head>
   <body>
     <div class="header">
-      <p>Welcome</p>
+      <h1><a href="/">Mangas</a></h1>
     </div>
     <div class="container">
       <section class="categories">
         <h1>Categories</h1>
         <ul class="genere">
-          <li><a href="#">Shôjo manga (少女マンガ)</a></li>
-          <li><a href="#">Josei manga (女性マンガ)</a></li>
-          <li><a href="#">Shônen manga (少年マンガ)</a></li>
-          <li><a href="#">Gekiga manga (劇画マンガ)</a></li>
+          <li><a href="Shôjo">Shôjo manga (少女マンガ)</a></li>
+          <li><a href="Josei">Josei manga (女性マンガ)</a></li>
+          <li><a href="Shônen">Shônen manga (少年マンガ)</a></li>
+          <li><a href="Gekiga">Gekiga manga (劇画マンガ)</a></li>
         </ul>
-        <button class="add">Add books</button>
+        <button class="add">Add Manga</button>
       </section>
       <section class="books">
-        <h1>Books</h1>
+        <!-- <h1>Books</h1> -->
         <div class="book_list">
+          <% top_mangas.forEach(function(manga){ %>
           <div class="block">
-            <img src="img/manga1.jpg" alt="" />
-            <p>Title : Girl Power</p>
-            <p>Author : Krissny</p>
-            <p>Genere : Shôjo manga</p>
-            <p>Publication Year : 2008</p>
+            <img src="<%= manga.link %>" alt="">
+            <p>Title : <%= manga.title %></p>
+            <p>Author : <%= manga.author %></p>
+            <p>Genre : <%= manga.genre %></p>
+            <p>Publication Year : <%= manga.publicationyear %></p>
           </div>
-          <div class="block">
-            <img src="img/manga1.jpg" alt="" />
-            <p>Title : Girl Power</p>
-            <p>Author : Krissny</p>
-            <p>Genere : Shôjo manga</p>
-            <p>Publication Year : 2008</p>
-          </div>
-          <div class="block">
-            <img src="img/manga1.jpg" alt="" />
-            <p>Title : Girl Power</p>
-            <p>Author : Krissny</p>
-            <p>Genere : Shôjo manga</p>
-            <p>Publication Year : 2008</p>
-          </div>
-          <div class="block">
-            <img src="img/manga1.jpg" alt="" />
-            <p>Title : Girl Power</p>
-            <p>Author : Krissny</p>
-            <p>Genere : Shôjo manga</p>
-            <p>Publication Year : 2008</p>
-          </div>
-          <div class="block">
-            <img src="img/manga1.jpg" alt="" />
-            <p>Title : Girl Power</p>
-            <p>Author : Krissny</p>
-            <p>Genere : Shôjo manga</p>
-            <p>Publication Year : 2008</p>
-          </div>
-          <div class="block">
-            <img src="img/manga1.jpg" alt="" />
-            <p>Title : Girl Power</p>
-            <p>Author : Krissny</p>
-            <p>Genere : Shôjo manga</p>
-            <p>Publication Year : 2008</p>
-          </div>
-          <div class="block">
-            <img src="img/manga1.jpg" alt="" />
-            <p>Title : Girl Power</p>
-            <p>Author : Krissny</p>
-            <p>Genere : Shôjo manga</p>
-            <p>Publication Year : 2008</p>
-          </div>
-          <div class="block">
-            <img src="img/manga1.jpg" alt="" />
-            <p>Title : Girl Power</p>
-            <p>Author : Krissny</p>
-            <p>Genere : Shôjo manga</p>
-            <p>Publication Year : 2008</p>
-          </div>
+          <% }); %>
         </div>
       </section>
     </div>

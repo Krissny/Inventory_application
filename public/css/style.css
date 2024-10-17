@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
   display: flex;
@@ -9,7 +10,21 @@ body {
 .header {
   text-align: center;
   margin: 10px;
-  border: 2px solid red;
+  /* border: 2px solid red; */
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  background: rgb(91, 232, 91);
+  padding: 8px;
+}
+.header h1 {
+  margin-left: 10px;
+  font-weight: 500;
+}
+.header h1 a {
+  text-decoration: none;
+  color: white;
 }
 .container {
   display: flex;
@@ -19,14 +34,18 @@ body {
   margin: 10px;
 }
 .categories {
-  width: 20vw;
+  min-width: 20vw;
+  height: 95vh;
   padding: 10px;
-  border: 2px solid blue;
-  height: auto;
+  /* border: 2px solid blue; */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  position: sticky;
+  top: 10px;
+  background: rgb(213, 211, 211);
+  border-radius: 10px;
 }
 .categories ul {
   list-style: none;
@@ -36,6 +55,11 @@ body {
 .categories ul li a {
   text-decoration: none;
 }
+.categories ul li:hover {
+  background: rgb(91, 232, 91);
+  color: white;
+  border-radius: 8px;
+}
 .add {
   padding: 10px;
   background-color: rgb(111, 210, 111);
@@ -43,12 +67,17 @@ body {
   border-radius: 2px;
   font-weight: bold;
 }
+.add:hover {
+  cursor: pointer;
+}
 
 .books {
   width: 80vw;
   padding: 10px;
-  border: 2px solid violet;
+  /* border: 2px solid violet; */
   height: auto;
+  /* box-shadow: inset; */
+  /* background-color: rgb(244, 167, 244); */
 }
 
 .books h1 {
@@ -68,9 +97,19 @@ body {
   align-items: flex-start;
   gap: 5px;
   padding: 10px;
-  border: 2px solid aqua;
+  /* border: 1px solid black; */
+  border-radius: 5px;
+  font-weight: 500;
+  max-width: 200px;
+}
+
+.block:hover {
+  background-color: rgb(244, 167, 244);
+  color: white;
+  font-weight: bold;
 }
 
 .block img {
   width: 200px;
+  border-radius: 5px;
 }
