@@ -7,6 +7,10 @@ body {
   display: flex;
   flex-direction: column;
 }
+a{
+  text-decoration: none;
+  color: white;
+}
 .header {
   text-align: center;
   margin: 10px;
@@ -60,7 +64,7 @@ body {
   color: white;
   border-radius: 8px;
 }
-.add {
+button {
   padding: 10px;
   background-color: rgb(111, 210, 111);
   color: white;
@@ -112,4 +116,24 @@ body {
 .block img {
   width: 200px;
   border-radius: 5px;
+}
+
+/* new manga */
+form {
+  width: 80vw;
+  padding: 10px;
+  /* border: 2px solid violet; */
+  height: auto;
+  /* box-shadow: inset; */
+  /* background-color: rgb(244, 167, 244); */
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+input{
+  padding: 2px;
+  
+  border-radius: 2px;
 }

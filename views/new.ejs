@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1><a href="/">Mangas</a></h1>
+    </div>
+    <div class="container">
+      <section class="categories">
+        <h1>Categories</h1>
+        <ul class="genere">
+          <li><a href="Shôjo">Shôjo manga (少女マンガ)</a></li>
+          <li><a href="Josei">Josei manga (女性マンガ)</a></li>
+          <li><a href="Shônen">Shônen manga (少年マンガ)</a></li>
+          <li><a href="Gekiga">Gekiga manga (劇画マンガ)</a></li>
+        </ul>
+        <button class="add">Add Manga</button>
+      </section>
+      <form action="/add" method="post">
+        <div>
+          <label for="manga_name">Title</label>
+          <input name="manga_name" type="text" required>
+        </div>
+        <div>
+          <label for="author">Author</label>
+          <input name="author" type="text"required>
+        </div>
+        <div>
+          <label for="Genre">Genre</label>
+          <select name="Genre" required>
+            <option selected value="Shôjo">Shôjo</option>
+            <option value="Josei">Josei</option>
+            <option value="Shônen">Shônen</option>
+            <option value="Gekiga">Gekiga</option>
+          </select>
+        </div>
+        
+        <div>
+          <label for="publication">Publication Year</label>
+          <input name="publication" type="number" required>
+        </div>
+        <div>
+          <label for="link">Link of image</label>
+          <input name="link" type="text" required>
+        </div>
+        <button type="submit">Submit</button>
+     </form>
+    </div>
+  </body>
+</html>

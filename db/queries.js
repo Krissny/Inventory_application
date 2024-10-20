@@ -13,5 +13,11 @@ async function getShojo(Genre){
   );
   return rows;
 }
+async function add(manga_name, author, Genre, publication, link){
+  await pool.query(
+    "INSERT INTO Books (Title, Author, Genre, PublicationYear, Link) VALUES($1, $2, $3, $4, $5)",[manga_name, author, Genre, publication, link]
+  );
+  console.log("Added")
+}
 
-module.exports = { getTopMangas , getShojo };
+module.exports = { getTopMangas , getShojo , add};

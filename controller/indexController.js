@@ -11,3 +11,15 @@ exports.getShojo = async(req, res)=>{
   const shojo_mangas = await db.getShojo(req.params.Genre);
   res.render("index", {top_mangas : shojo_mangas});
 }
+
+exports.getForm = async(req, res)=>{
+  // console.log("it runs")
+  res.render('new');
+}
+
+exports.addManga = async(req, res)=>{
+  const {manga_name, author, Genre , publication , link} = req.body;
+  console.log({manga_name, author, Genre , publication , link})
+  // await db.add(manga_name, author, Genre, publication, link);
+  res.redirect('/')
+}
