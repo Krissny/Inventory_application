@@ -26,6 +26,11 @@
         <div class="book_list">
           <% top_mangas.forEach(function(manga){ %>
           <div class="block">
+            <form action="delete/<%= manga.bookid %>"method ='post' class="delete">
+              <input name="key" type="text" placeholder="Enter secure key">
+              <button type="submit">Delete</button>
+            </form>
+            <!-- <a href="delete/<%= manga.bookid %>"><button class="delete">Delete</button></a> -->
             <img src="<%= manga.link %>" alt="">
             <p>Title : <%= manga.title %></p>
             <p>Author : <%= manga.author %></p>

@@ -1,4 +1,6 @@
 const db = require("../db/queries");
+require("dotenv").config();
+const alert = require('alert');
 
 exports.firstload = async (req, res) => {
   const top_mangas = await db.getTopMangas();
@@ -20,6 +22,18 @@ exports.getForm = async(req, res)=>{
 exports.addManga = async(req, res)=>{
   const {manga_name, author, Genre , publication , link} = req.body;
   console.log({manga_name, author, Genre , publication , link})
-  // await db.add(manga_name, author, Genre, publication, link);
+  await db.add(manga_name, author, Genre, publication, link);
   res.redirect('/')
+}
+exports.deleteManga = async(req, res)=>{
+  const {key} = req.body;
+  const bookid = req.params.bookid;
+  console.log(key)
+  console.log(process.env.KEY)
+  if(key == process.env.KEY){
+    await db.del(bookid)
+    res.send("Deltion succesful")
+  }
+  res.send("Wrong key")
+
 }

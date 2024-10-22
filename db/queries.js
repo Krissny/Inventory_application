@@ -19,5 +19,12 @@ async function add(manga_name, author, Genre, publication, link){
   );
   console.log("Added")
 }
+async function del(bookid){
+  await pool.query(
+    "DELETE FROM books WHERE bookid = $1",[bookid]
+  );
+  console.log("Added")
+}
 
-module.exports = { getTopMangas , getShojo , add};
+
+module.exports = { getTopMangas , getShojo , add, del};
