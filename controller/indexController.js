@@ -32,7 +32,7 @@ exports.deleteManga = async(req, res)=>{
   console.log(process.env.KEY)
   if(key == process.env.KEY){
     await db.del(bookid)
-    res.send("<h1>Deletion succesful</h1>")
+    res.send("<h1>Deletion successful</h1>")
   }
   res.send("<h1>Wrong key</h1>")
 
