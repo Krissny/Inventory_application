@@ -9,7 +9,7 @@ async function getTopMangas() {
 
 async function getShojo(Genre){
   const {rows} = await pool.query(
-    "SELECT Title, Author, Genre, PublicationYear, Link FROM Books WHERE genre = $1 ",[Genre]
+    "SELECT BookId, Title, Author, Genre, PublicationYear, Link FROM Books WHERE genre = $1 ",[Genre]
   );
   return rows;
 }
