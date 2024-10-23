@@ -1,6 +1,6 @@
 const db = require("../db/queries");
 require("dotenv").config();
-const alert = require('alert');
+const notifier = require('node-notifier');
 
 exports.firstload = async (req, res) => {
   const top_mangas = await db.getTopMangas();
@@ -34,6 +34,6 @@ exports.deleteManga = async(req, res)=>{
     await db.del(bookid)
     res.send("Deltion succesful")
   }
-  res.send("Wrong key")
+  res.send("<h1>Wrong key</h1>")
 
 }

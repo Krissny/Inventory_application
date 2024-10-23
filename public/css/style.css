@@ -145,9 +145,27 @@ button {
     align-items: center;
     gap: 20px;
 }
-
+.form div{
+  display: flex;
+  flex-direction: column;
+}
 input{
   padding: 2px;
   
   border-radius: 2px;
+}
+
+#genreoption{
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+}
+
+@media (max-width : 400px){
+  .categories h1{
+    font-size: 15px;
+  }
+  .genre li{
+    font-size: 12px;
+  }
 }
